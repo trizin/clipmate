@@ -19,6 +19,6 @@ jobs:
     - name: Install gcc-multilib
       run: sudo apt install gcc-multilib
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --verbose --release
     - name: Run tests
       run: cargo test --verbose
