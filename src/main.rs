@@ -33,7 +33,7 @@ fn main() {
         }
         Some("history") => {
             let history = manager.get_history();
-            for (i, item) in history.items.iter().enumerate() {
+            for (i, item) in history.iter().enumerate() {
                 println!("{}: {} {:?}", i + 1, item.data, item.item_type);
             }
         }

@@ -22,7 +22,7 @@ pub struct ClipboardItem {
 
 #[derive(Serialize, Deserialize, Debug, Default)]
 pub struct ClipboardHistory {
-    pub items: Vec<ClipboardItem>,
+    items: Vec<ClipboardItem>,
     image_counter: u128,
     text_counter: u128,
 }
@@ -115,8 +115,8 @@ impl ClipboardManager {
             .expect("Failed to write to the file");
     }
 
-    pub fn get_history(&self) -> &ClipboardHistory {
-        &self.history
+    pub fn get_history(&self) -> &Vec<ClipboardItem> {
+        &self.history.items
     }
 
     pub fn set_clipboard_text(&self, item_number: usize) {
